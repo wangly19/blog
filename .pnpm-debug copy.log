@@ -1,0 +1,41 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {},
+    "prefix": "/Users/wangly19/Library/pnpm/store/v3/tmp/dlx-43945"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/wangly19/Library/pnpm/store/v3",
+    "virtualStoreDir": "/Users/wangly19/Library/pnpm/store/v3/tmp/dlx-43945/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/wangly19/Library/pnpm/store/v3/tmp/dlx-43945",
+    "stage": "resolution_started"
+  },
+  "4 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "create-docusauru is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npm.taobao.org/create-docusauru"
+    },
+    "response": {
+      "size": 0
+    },
+    "pkgName": "create-docusauru",
+    "spec": {
+      "fetchSpec": "latest",
+      "name": "create-docusauru",
+      "type": "tag"
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npm.taobao.org/create-docusauru: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "pnpm: GET https://registry.npm.taobao.org/create-docusauru: Not Found - 404\n    at RetryOperation._fn (/Users/wangly19/.npm-global/pnpm-global/5/node_modules/.pnpm/registry.npmmirror.com+pnpm@7.3.0/node_modules/pnpm/dist/pnpm.cjs:85463:19)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+    }
+  }
+}
