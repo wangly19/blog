@@ -1,22 +1,20 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'wangly19',
-  tagline: 'Open Source.',
+  title: 'wangly\'blog',
+  tagline: 'edit...',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
 
   presets: [
     [
@@ -24,16 +22,15 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          // id: 'docs', // omitted => default instance
+          routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          blogSidebarTitle: '面试题系列',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -44,22 +41,65 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'frontend',
+        path: 'frontend',
+        routeBasePath: 'frontend',
+        sidebarPath: require.resolve('./sidebarsDemo.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'basic',
+        path: 'basic',
+        routeBasePath: 'basic',
+        sidebarPath: require.resolve('./sidebarsBasic.js'),
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
         title: 'wangly\'blog',
         items: [
+          // {
+          //   type: 'doc',
+          //   position: 'right',
+          //   docId: 'intro',
+          //   label: '其他',
+          // },
+          // {
+          //   to: '/frontend/intro',
+          //   position: 'right',
+          //   label: '前端技术',
+          //   activeBaseRegex: `/frontend/`,
+          // },
+          // {
+          //   to: '/basic/intro',
+          //   position: 'right',
+          //   label: '基础知识',
+          //   activeBaseRegex: `/basic/`,
+          // },
           {
-            type: 'doc',
-            docId: 'frontend',
-            position: 'left',
-            label: '前端知识',
+            to: '/question',
+            label: '面试题',
+            position: 'right',
           },
-          { to: '/blog', label: '代码风暴', position: 'left' },
           {
-            href: 'https://github.com/wangly19',
-            label: 'Github',
+            to: '/blog',
+            label: 'Blog',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
