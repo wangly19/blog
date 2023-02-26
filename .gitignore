@@ -1,20 +1,33 @@
-# Dependencies
-/node_modules
+# node package download 
+**/node_modules
 
-# Production
-/build
-
-# Generated files
-.docusaurus
-.cache-loader
-
-# Misc
+# macos
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# production
+**/dist
+
+# ssr production
+**/dist-ssr
+**/.next
+
+# local env
+*.local
+
+
+# pnpm package npmrc
+pnpm-lock.yaml
+.pnpm-debug.log
+
+# config
+**/moyu.config.js
+
+# eslint
+.eslintcache
+.vscode/settings.json
+
+# turbo
+**/.turbo
+
+# env
+**/*.env
